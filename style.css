@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #313131b7;
+    background animation: display: ;
+}
+
+.box {
+    position: relative;
+    width: 390px;
+    height: 600px;
+    background: transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 80px;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 620px;
+    background: linear-gradient(0deg, transparent, transparent, #1335bd, #4f15a0, #430654);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 480px;
+    height: 480px;
+    background: linear-gradient(0deg, transparent, transparent, #0a4091, #451d7a, #5f0e7c);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+.borderLine {
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+
+.borderLine::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, transparent, #530764, #4f15a0, #430654);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box form {
+    background: #222222fd;
+    padding: 50px 40px;
+    border-radius: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box form h3 {
+    background: #13189c25;
+    color: white;
+    padding: 5px 4px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box form h2 {
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+    /* Square effect around the text */
+.box form input[type="submit"]::before {
+    content: attr(data-text); /* Use the "data-text" attribute for content */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent; /* Hide the original text */
+    -webkit-background-clip: text; /* Apply background only to the text */
+    background-clip: text;
+    background-image: linear-gradient(to right, #0099ff, #0099ff); /* Set the square effect color */
+    -webkit-text-fill-color: transparent; /* Hide text fill color */
+    text-fill-color: transparent;
+    z-index: 1;
+}
+}
+
+.box form .inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+
+.box form .inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #ffffff;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.box form .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    pointer-events: none;
+    color: #b0a8a8;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.box form .inputBox input:valid + span,
+.box form .inputBox input:focus + span {
+    color: #ffffff;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+}
+
+.box form .inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.box form .inputBox input:valid + i,
+.box form .inputBox input:focus + i {
+    height: 44px;
+}
+
+.box form .links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.box form .links a {
+    color: #ffffff;
+}
+
+.box form .links a:hover {
+    color: #fff;
+}
+
+.box form .inputBox input[type="submit"] {
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 20px;
+}
+
+.box form input[type="submit"]:active {
+    opacity: 0.8;
+}
+
+
+/* ... Your existing CSS ... */
+
+/* ... Your existing CSS code ... */
+
+/* Styles for the login button */
+.box form input[type="submit"] {
+    border: none;
+    outline: none;
+    padding: 15px 70px;
+    background: #4e098048;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 40px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-shadow: 2px 2px 2px #0056b3, -2px -2px 2px #0056b3; /* 3D light effect */
+}
+
+/* Blue light effect animation */
+.box form input[type="submit"]::before {
+    content: "";
+    position: absolute;
+    background: #fcfeff;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: blueLight 2s linear infinite;
+    z-index: -1;
+}
+
+@keyframes blueLight {
+    0% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+
+.box form input[type="submit"]:hover {
+    background: #0056b3; /* Button color on hover */
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .box {
+        max-width: 100%;
+    }
+}
+.container .box
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 320px;
+    background: var(--clr);
+    box-shadow: 0 0 0 15px #232323;
+    0 25px 55px var(--clr);
+    /* ... Your existing CSS code ... */
+
+/* Styles for the login button */
+.box form input[type="submit"] {
+    border: none;
+    outline: none;
+    padding: 15px 70px;
+    background: #4e098048;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 40px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-shadow: 2px 2px 2px #0056b3, -2px -2px 2px #0056b3; /* 3D light effect */
+}
+
+/* Blue light effect animation */
+.box form input[type="submit"]::before {
+    content: "";
+    position: absolute;
+    background: #0099ff;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: blueLight 2s linear infinite;
+    z-index: -1;
+}
+
+@keyframes blueLight {
+    0% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+}
+
+
+
+
+
+
+
+/* Your existing CSS code */
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .box {
+        width: 100%; /* Make the container full width on smaller screens */
+    }
+
+    .box form {
+        padding: 20px 10px; /* Adjust the padding for mobile */
+    }
+
+    .box form .inputBox {
+        width: 100%; /* Make input boxes full width on mobile */
+        margin-top: 15px; /* Adjusted margin for mobile */
+    }
+
+    .box form .inputBox input {
+        padding: 10px; /* Adjusted padding for mobile */
+    }
+
+    .box form .links {
+        display: flex;
+        flex-direction: column; /* Stack links vertically on mobile */
+        margin-top: 10px; /* Adjusted margin for mobile */
+    }
+
+    .login-button {
+        padding: 15px 70px; /* Adjusted button size for mobile */
+        margin-top: 20px; /* Adjusted margin for mobile */
+    }
+   /* Blue light effect animation */
+.box form input[type="submit"]::before {
+    content: "";
+    position: absolute;
+    background: #0099ff;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: blueLight 2s linear infinite;
+    z-index: -1;
+}
+
+@keyframes blueLight {
+    0% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+}  
+
+
+
+
+
+
+
+/* Styles for the logo */
+.company-info img {
+    width: 80px; /* Adjust the logo width as needed */
+    margin-bottom: 10px; /* Add margin below the logo */
+    margin-left: 60px;
+}
+
+img{
+    filter: drop-shadow(5px 5px 15px Blue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire viewport */
+}
+
+
+
